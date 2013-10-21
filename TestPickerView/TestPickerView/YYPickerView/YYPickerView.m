@@ -368,7 +368,7 @@
         int index = [self indexOfSmallestAtArray:array];
         UITableViewCell *cell = cells[MAX(index, 0)];
         NSIndexPath *indexPath = [tableView indexPathForCell:cell];
-        if (cells.count < 4 && indexPath.row == rows - 2)
+        if (cells.count < 4 && indexPath.row == rows - 2 && rows!=2)
         {
             indexPath = [NSIndexPath indexPathForRow:MIN(rows - 1, indexPath.row + 1) inSection:0];
         }
